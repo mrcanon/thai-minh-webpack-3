@@ -1,0 +1,84 @@
+extends templates/layouts/one-colum.jade
+block head
+  +head('About', 'description', 'keywords', '', '', '', '')
+block content
+  section.panel-banner(data-parallax="true")
+    .container
+      .banner-inner
+          .banner-cover
+            .banner-table
+              h2.banner-heading về thái minh
+  //.panel-banner
+  section.panel-overview
+    .container-inner    
+      .heading
+        h2.heading-name Tổng quan
+        p.heading-desc Về thái minh
+      .overview-item
+        .row
+          .col-sm-6
+          .col-sm-6
+            .overview-content
+              h3.overview-heading Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+              .overview-summary
+                p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+                p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.
+  //.panel-overview      
+  section.panel-about 
+    .container
+      .heading
+        h2.heading-name Lĩnh vực
+        p.heading-desc Lĩnh vực hoạt động
+      .row
+        .col-sm-4
+          +about('Construction', '#', 'assets/img/data/about-1.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nulla velit, rhoncus eu euismod faucibus, ultricies eget ligula. ')
+        .col-sm-4
+          +about('building renovation', '#', 'assets/img/data/about-2.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nulla velit, rhoncus eu euismod faucibus, ultricies eget ligula. ')
+         .col-sm-4
+          +about('project management', '#', 'assets/img/data/about-3.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nulla velit, rhoncus eu euismod faucibus, ultricies eget ligula. ')
+  //.panel-about 
+  section.panel-plan
+    .container
+      .plan-table
+        .plan-row
+          h2.plan-cell.plan-heading 
+            span From foundations to future
+          .plan-cell.plan-content
+            +plan('assets/img/data/stats-2.png', '<span>56</span>+', 'công trình')
+            +plan('assets/img/data/stats-1.png', '<span>120</span>+', 'nhân viên')
+            +plan('assets/img/data/stats-3.png', '<span>90</span>+', 'dự án')
+  //.panel-plan
+  section.panel-vision
+    .container-inner 
+      .heading
+        h2.heading-name tại sao chọn chúng tôi?
+        p.heading-desc tầm nhìn - sứ mệnh - giá trị cốt lõi 
+      article.vision-item
+        .vision-row
+          .vision-cell.vision-media.bg-7
+          .vision-cell.vision-content
+            h3.vision-heading tầm nhìn
+            .vision-summary
+              p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt tmollitia animi, id est laborum et dolorum fuga.
+              p Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+      article.vision-item
+        .vision-row
+          .vision-cell.vision-content
+            h3.vision-heading sứ mệnh
+            .vision-summary
+              p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Nemo enim ipsam voluptatem quia voluptas.
+              ul
+                li Nemo enim ipsam voluptatem quia 
+                li Voluptas sit aspernatur 
+                li Aut odit aut fugit, sed quia consequuntur
+          .vision-cell.vision-media.bg-8
+  //.panel-vision
+  section.panel-core
+    .container
+      h2.core-heading giá trị cốt lõi
+      .core-body
+        +core('fa-cogs', 'Sed ut perspiciatis unde ', 'Omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque.')
+        +core('fa-users', 'Sed ut perspiciatis unde ', 'Omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque.')
+        +core('fa-wrench', 'Sed ut perspiciatis unde ', 'Omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque.')
+        +core('fa-handshake-o', 'Sed ut perspiciatis unde ', 'Omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque.')
+        +core('fa-line-chart', 'Sed ut perspiciatis unde ', 'Omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque.')

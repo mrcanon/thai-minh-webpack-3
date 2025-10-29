@@ -1,0 +1,54 @@
+.panel-banner {
+    background: url(../img/bg-about.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    margin-bottom: 20px;
+    
+}
+
+.banner-inner {
+    position: relative;
+    
+    &::before {
+        content: '';
+        display: block;
+        padding-top: percentage(280/1170)
+    }
+}
+
+.banner-cover {
+    @include coverer;
+}
+
+.banner-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-heading {
+    display: table-cell;
+    vertical-align: middle;
+    color: $color-white;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: (133/72);
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: 3px;
+    padding-top: 2px;
+    font-size: 20px;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+}
+
+@include breakpoint(md) {
+    .banner-heading {
+        font-size: 32px;
+    }
+}
+
+@include breakpoint(lg) {
+    .banner-heading {
+        font-size: 36px;
+    }
+}

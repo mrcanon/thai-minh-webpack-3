@@ -1,0 +1,214 @@
+.panel-recruiment {
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    .heading-common {
+        margin-bottom: 10px;
+    }
+
+    .single-group {
+        max-width: 815px;
+        margin: 0 auto 18px;
+    }
+}
+
+.recruiment-media {
+
+    img {
+        width: 100%;
+    }
+}
+
+.recruiment-heading {
+    font-size: 12px;
+    color: $color-primary;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.recruiment-content {
+
+    h4 {
+        font-size: 12px;
+        color: $color-primary;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    h2, 
+    h3, 
+    h5, 
+    h6 {
+        font-size: 12px;
+        color: $color-eight;
+        text-transform: uppercase;
+        margin-top: 15px;
+        margin-bottom: 9px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        position: relative;
+        position: relative;
+        padding-left: 25px;
+
+       .fa { 
+            color: $color-second;
+            position: absolute;
+            left: 0;
+            top: 5px;
+        }
+    }
+}
+
+.panel-job {
+    padding-top: 15px;
+    padding-bottom: 20px;
+
+    .heading-common {
+        margin-bottom: 10px;
+    }
+}
+
+.job-item {
+    margin-bottom: 20px;
+}
+
+.job-heading {
+    font-size: 12px;
+    background: $color-five;
+    line-height: (17/12);
+    margin-bottom: 0;
+    margin-top: 0;
+
+    a {
+        display: block;
+        text-decoration: none;
+        padding: 12px 23px;
+    }
+}
+
+.job-content {
+    padding: 8px 12px 4px;
+}
+
+.job-summary {
+    border-bottom: 1px solid $color-four;
+    padding-bottom: 11px;
+    margin-bottom: 9px;
+}
+
+.job-post {
+    font-size: 10px;
+    margin-bottom: 0;
+}
+
+.job-body {
+    margin-bottom: 19px;
+    
+    +.paging {
+        margin-bottom: 19px;
+    }
+}
+
+@include breakpoint(sm) {
+    .panel-recruiment {
+        padding-top: 43px;
+        padding-bottom: 30px;
+    
+        .heading-common {
+            margin-bottom: 19px;
+        }
+
+        .single-spec {
+            padding-left: 25px;
+            margin-top: 7px;
+        }
+
+        .single-detail {
+            max-width: 420px;
+        }
+    }
+
+    .recruiment-item {
+        display: table;
+        width: 100%;
+    }
+    
+    .recruiment-row {
+        display: table-row;
+    }
+    
+    .recruiment-cell {
+        display: table-cell;
+    }
+    
+    .recruiment-content {
+        vertical-align: middle;
+        padding-left: 56px;
+        padding-top: 16px;
+
+        h4 {
+            margin-bottom: 21px;
+        }
+
+        h2, 
+        h3, 
+        h5, 
+        h6 {
+            margin-top: 26px;
+        }
+    }
+    
+    .recruiment-media {
+        width: percentage(832/1938);
+
+        img {
+            width: 100%;
+        }
+    }    
+
+    .recruiment-heading {
+        margin-bottom: 21px;
+    }
+
+    .recruiment-summary {
+        
+        h2, 
+        h3, 
+        h4, 
+        h5, 
+        h6 {
+            margin-top: 26px;
+        }
+    }
+
+    .panel-job {
+        padding-top: 33px;
+        padding-bottom: 55px;
+    
+        .heading-common {
+            margin-bottom: 43px;
+        }
+    }
+
+    .job-content {
+        padding: 17px 24px 7px;
+    }
+
+    .job-body {
+        margin-bottom: 38px;
+
+        .col-sm-6 {
+
+            &:nth-child(2n+1) {
+                clear: left;
+            }
+        }
+    }
+}

@@ -1,0 +1,151 @@
+.panel-mission {
+    padding-top: 16px;
+    padding-bottom: 20px;
+    
+    .heading {
+        margin-bottom: 17px;
+    }
+}
+
+
+
+.mission-media {
+    margin-bottom: 10px;
+
+    img {
+        width: 100%;
+        transition: opacity .3s;
+    }
+
+    a {
+        display: block;
+        background: $color-primary;
+
+        &:hover {
+
+            img {
+                opacity: .8
+            }
+        }
+    }
+}
+
+.mission-content {
+    h2, 
+    h3, 
+    h4, 
+    h5, 
+    h6 {
+        font-size: 14px;
+        color: $color-second;
+        text-transform: uppercase;
+        line-height: 1.35;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    ul, 
+    ol {
+        list-style: none;
+        margin: 0 0 10px;
+        padding: 0 0 0 17px;
+    }
+
+    li {
+        position: relative;
+        padding-left: 13px;
+
+        &::before { 
+            content: '\f101';
+            display: inline-block;
+            @include fontawesome; 
+            color: $color-second;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.mission-summary {
+    margin-bottom: 20px;
+}
+
+.mission-link {
+    text-align: center;
+
+    a {
+        @include btn-view;
+        min-width: 128px;
+    }
+}
+
+@include breakpoint(sm) {
+    .panel-mission {
+        padding-top: 39px;
+        padding-bottom: 46px;
+
+        .heading {
+            margin-bottom: 58px;
+        }
+    }
+
+    .mission-content {
+        padding-left: 48px;
+        padding-bottom: 4px;
+        vertical-align: middle;
+
+        h2, 
+        h3, 
+        h4, 
+        h5, 
+        h6 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        ul, 
+        ol {
+            margin-bottom: 20px;
+            padding-left: 35px;
+        }
+
+        p {
+
+            &:last-of-type {
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+    .mission-summary {
+        margin-bottom: 41px;
+    }
+
+    .mission-item {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        max-width: 964px;
+        margin: 0 auto;
+    }
+
+    .mission-row {
+        display: table-row;
+    }
+
+    .mission-cell {
+        display: table-cell;
+    }
+
+    .mission-media {
+        width: percentage(912/1938);
+        margin-bottom: 0;
+        vertical-align: top;
+    }
+
+    .mission-link {
+        text-align: left;
+    }
+}

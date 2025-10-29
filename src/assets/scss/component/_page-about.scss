@@ -1,0 +1,245 @@
+.panel-overview {
+    padding-top: 16px;
+
+    .heading {
+        margin-bottom: 17px;
+    }
+}
+
+.overview-item {
+    background-image: url(../img/bg-overview.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overview-heading {
+    font-size: 15px;
+    color: $color-second;
+    text-transform: uppercase;
+    margin-top: 0;
+    line-height: (48/30);
+    margin-bottom: 17px;
+}
+
+.overview-content {
+    padding: 15px;
+}
+
+.overview-summary {
+
+    p {
+        margin-bottom: 20px;
+    }
+}
+
+.panel-vision {
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    .heading {
+        margin-bottom: 17px;
+    }
+}
+
+.vision-media {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::before {
+        content: '';
+        display: block;
+        padding-top: percentage(680/968);
+    }
+}
+
+.vision-heading {
+    font-size: 14px;
+    color: $color-second;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+ .vision-content {
+    background: $color-five;
+    padding: 13px 15px;
+
+    ul, 
+    ol {
+        list-style: none;
+        margin: 0 0 10px;
+        padding: 0 0 0 7px;
+
+        // &:last-of-type {
+        //     margin-bottom: 0;
+        // }
+    }
+
+    li {
+        position: relative;
+        padding-left: 13px;
+
+        &::before { 
+            content: '\f101';
+            display: inline-block;
+            @include fontawesome; 
+            color: $color-second;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+ }
+
+ .panel-core {
+     padding-top: 16px;
+     padding-bottom: 20px;
+ }
+
+ .core-heading {
+    font-size: 14px;
+    color: $color-second;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: (48/36);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.core-icon {
+    font-size: 24px;
+    position: absolute;
+    left: -1px;
+    top: -2px;
+    color: $color-primary;
+}
+
+.core-title {
+    font-size: 12px;
+    color: $color-primary;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 3px;
+}
+
+.core-item {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+
+.core-summary {
+    margin-bottom: 0;
+}
+
+@include breakpoint(sm) {
+    .panel-overview {
+        padding-top: 34px;
+
+         .heading {
+            margin-bottom: 39px;
+        }
+    }
+
+    .overview-content {
+        padding: 45px 15px 30px 0;
+    }
+
+    .panel-vision {
+        padding-top: 35px;
+        padding-bottom: 35px;
+
+        .heading {
+            margin-bottom: 49px;
+        }
+    }
+
+    .vision-item {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .vision-row {
+        display: table-row;
+    }
+
+    .vision-cell {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .vision-heading {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+     .vision-content {
+        padding: 26px 51px 10px;
+
+        ul, 
+        ol {
+            margin-bottom: 20px;
+            padding-left: 14px;
+        }
+    }
+
+    .panel-core {
+        padding-top: 46px;
+        padding-bottom: 59px;
+    }
+
+     .core-heading {
+        font-size: 18px;
+        margin-bottom: 54px;
+    }
+
+    .core-body {
+        background: url(../img/bg-core.jpg) no-repeat 49% 0;
+        background-size: percentage(565/1938) auto;
+        @include clearfix;
+        max-width: 970px;
+        margin: 0 auto;
+        padding-top: 8px;
+    }
+
+    .core-icon {
+        font-size: 40px;
+    }
+
+    .core-title {
+        margin-bottom: 8px;
+    }
+
+    .core-item {
+        padding-left: 69px;
+        width: percentage(615/1938);
+        float: left;
+        margin-bottom: 49px;
+
+        &:nth-child(2n) {
+            margin-left: percentage(708/1938);
+        }
+
+        &:nth-child(2n + 1) {
+            clear: left;
+        }
+
+        &:last-of-type() {
+            margin-top: 6px;
+            margin-left: percentage(328/969);
+        }
+    }
+}
+
+@include breakpoint(lg) {
+    .panel-overview {
+
+        + .panel-about {
+            padding-bottom: 48px;
+        }
+    }
+}

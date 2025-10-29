@@ -1,0 +1,201 @@
+.panel-connect {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background: url(../img/bg-contact.jpg) no-repeat 100% 50%;
+    background-size: cover;
+    color: $color-white;
+
+    h2, 
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 12px;
+        color: $color-second;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 6px;
+    }
+
+    p {
+        max-width: 430px;
+        line-height: (40/28);
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.connect-cell {
+    padding-bottom: 8px;
+    padding-top: 8px;
+
+    &:last-child {
+        text-align: center;
+    }
+}
+
+.customer-slider {
+
+    .owl-item {
+        
+        &:nth-child(odd) {
+            background: $color-five;
+        }
+
+        &:nth-child(even) {
+            background: $color-four;
+        }
+    }
+
+    .owl-dots {
+        text-align: center;
+        font-size: 0;
+        margin-top: 10px;
+
+        .active {
+            background: $color-six;
+        }
+    }
+
+    .owl-dot {
+        display: inline-block;
+        @include square(8px);
+        margin-left: 6px;
+        margin-right: 6px;
+        background: $color-seven;
+        border-radius: 50%;
+        transition: background .3s;
+    }
+
+    .owl-prev,
+    .owl-next {
+        border: 0;
+        background: transparent;
+        font-size: 30px;
+        line-height: 32px;
+        width: 32px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        margin-top: -16px;
+        padding: 0;
+        outline: none;
+    }
+
+    .owl-prev {
+        left: -31px;
+    }
+
+    .owl-next {
+        right: -31px;
+    }
+}
+
+.panel-customer {
+    padding-top: 16px;
+    padding-bottom: 20px;
+
+    .heading-common {
+        margin-bottom: 20px;
+    }
+
+    .mission-item {
+        margin-bottom: 25px;
+    }
+
+    .partner-item {
+
+        &::before {
+            padding-top: percentage(259/322);
+        }
+    }
+}
+
+.panel-testimonial {
+    padding-top: 10px;
+    padding-bottom: 30px;
+
+    .heading {
+        margin-bottom: 20px;
+    }
+
+    .partner-block {
+        padding: 30px 15px 20px;
+    }
+}
+
+.testimonial-body {
+
+    .partner-comment {
+        background: $color-five;
+    }
+}
+
+@include breakpoint(sm) {
+    .panel-connect {
+        font-size: 14px;
+
+        h2, 
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+    }
+
+    .panel-customer {
+        padding-top: 57px;
+        padding-bottom: 40px;
+
+        .heading-common {
+            margin-bottom: 56px;
+        }
+
+        .mission-content {
+            padding-top: 9px;
+        }
+    
+        .mission-item {
+            margin-bottom: 58px;
+        }
+    }
+
+    .connect-table {
+        display: table;
+        width: 100%;
+    }
+    
+    .connect-row {
+        display: table-row;
+    }
+    
+    .connect-cell {
+        display: table-cell;
+        vertical-align: bottom;
+        padding-bottom: 28px;
+        padding-top: 25px;
+    
+        &:last-child {
+            width: percentage(540/1940);
+            padding-left: 26px;
+            text-align: left;
+        }
+    }
+
+    .panel-testimonial {
+        padding-top: 28px;
+        padding-bottom: 46px;
+    
+        .heading {
+            margin-bottom: 40px;
+        }
+    
+        .partner-block {
+            padding: 35px 35px 54px;
+        }
+    }
+}

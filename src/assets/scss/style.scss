@@ -1,0 +1,71 @@
+// Core variables and mixins
+@import 'component/variables';
+@import 'component/mixins';
+
+
+/*------------------------------------------------------------------
+[Table of contents]
+1. Reset
+2. Typography
+3. Grid
+4. Elements
+98. Print
+99. Helpers
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[1. Reset]
+*/
+@import 'component/core/normalize';
+
+/*------------------------------------------------------------------
+[2. Typography]
+*/
+@import 'component/core/scaffolding';
+@import 'component/core/type';
+@import 'component/core/code';
+
+/*------------------------------------------------------------------
+[3. Grid]
+*/
+@import 'component/core/grid';
+
+/*------------------------------------------------------------------
+[4. Elements]
+*/
+@import 'component/core/buttons';
+@import 'component/core/form';
+
+/*------------------------------------------------------------------
+[5. Component]
+*/
+@import 'component/nav';  
+@import 'component/header';
+@import 'component/mainvisual';
+@import 'component/about';
+@import 'component/plan';
+@import 'component/mission';
+@import 'component/project';
+@import 'component/partner';
+@import 'component/aside';
+@import 'component/footer';
+@import 'component/dummy';// Se xoa
+@import 'component/banner';
+@import 'component/paging';
+@import 'component/animation';
+@import 'component/page-about';
+@import 'component/page-project';
+@import 'component/page-single';
+@import 'component/page-contact';
+@import 'component/page-partner';
+@import 'component/page-recruiment';
+@import 'component/wordpress';
+/*------------------------------------------------------------------
+[98. Print]
+*/
+@import 'component/core/print';
+
+/*------------------------------------------------------------------
+[99. Helpers]
+*/
+@import 'component/helpers';

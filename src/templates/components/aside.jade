@@ -1,0 +1,37 @@
+a.aside-cover(href="#", data-control="aside")
+aside.panel-aside#panel-aside
+    .aside-inner
+        .aside-heading 
+            span Menu
+            a.aside-btn(href="#panel-aside", data-control="aside") 
+                i.fa.fa-times
+        ul.nav-sidebar
+            +menu('#', 'Trang chủ', 'current-menu-item')
+            +menu('#', 'Về thái minh', '')
+            +menu('#', 'Dự án', '')
+            +menu('#', 'Đối tác', '')
+            +menu('#', 'Nhân sự', '')
+            +menu('#', 'Liên hệ', '')
+        .aside-item.aside-phone
+            a(href="tel:08438522248") 
+                .aside-icon 
+                    i.fa.fa-phone 
+                .aside-label TỔNG ĐÀI 24/7
+                .aside-value (+84) 4 3852 2248
+        .aside-item.aside-mail
+            a(href="mailto:info@thaiminhgroup.vn") 
+                .aside-icon 
+                    i.fa.fa-envelope
+                .aside-label Liên hệ
+                .aside-value info@thaiminhgroup.vn
+        ul.nav-social.aside-social
+            li
+                a(href="#") 
+                    i.fa.fa-facebook 
+            li
+                a(href="#")
+                    i.fa.fa-google-plus
+            li
+                a(href="#")
+                    i.fa.fa-linkedin
+//.panel-aside

@@ -1,0 +1,61 @@
+extends templates/layouts/one-colum.jade
+block head
+  +head('Recruiment', 'description', 'keywords', '', '', '', '')
+block content
+  section.panel-banner(data-parallax="true")
+    .container
+      .banner-inner
+          .banner-cover
+            .banner-table
+              h2.banner-heading Nhân sự
+  //.panel-banner
+  section.panel-recruiment
+    .container-inner
+      h2.heading-common working with us
+      .recruiment-item
+        .recruiment-row
+          .recruiment-cell.recruiment-media
+            img(src="assets/img/data/recruiment-1.jpg", width="450", height="360", alt="")
+          .recruiment-cell.recruiment-content
+            h2.recruiment-heading become our team member
+            .recruiment-summary
+              p Et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. 
+              h3 CÔNG TY TNHH XÂY DỰNG DÂN DỤNG VÀ THƯƠNG MẠI THÁI MINH
+              ul
+                li
+                    i.fa.fa-map-marker
+                    | Tầng 2, Toà nhà CDS, Số 33, Ngõ 61 Lạc Trung, Hai Bà Trưng, Hà Nội
+                li
+                    i.fa.fa-phone
+                    | (+84) 4 3852 2248
+                li
+                    i.fa.fa-envelope
+                    | info@thaiminhgroup.vn
+  //.panel-recruiment
+  section.panel-job
+    .container-inner
+      h2.heading-common các vị trí cần tuyển
+      .job-body
+        .row
+          +job('1. Assistant Manager', '#', 'Your job scope will include planning and organizing audit assignments, conducting reviews on the systems of accounting and internal controls, finalization of statutory financial statements.', '2 week ago')
+          +job('2. Marketing Manager', '#', 'Your job scope will include planning and organizing audit assignments, conducting reviews on the systems of accounting and internal controls, finalization of statutory financial statements.', '1 week ago')
+          +job('3. Finance Manager', '#', 'Your job scope will include planning and organizing audit assignments, conducting reviews on the systems of accounting and internal controls, finalization of statutory financial statements.', '3 week ago')
+          +job('4. Executive Assistant', '#', 'Your job scope will include planning and organizing audit assignments, conducting reviews on the systems of accounting and internal controls, finalization of statutory financial statements.', '1 week ago')
+          +job('5. Assistant Manager', '#', 'Your job scope will include planning and organizing audit assignments, conducting reviews on the systems of accounting and internal controls, finalization of statutory financial statements.', '2 week ago')
+          +job('6. Marketing Manager', '#', 'Your job scope will include planning and organizing audit assignments, conducting reviews on the systems of accounting and internal controls, finalization of statutory financial statements.', '3 week ago')
+      ul.paging
+        +menu('#', '1', 'active')
+        +menu('#', '2', '')
+        +menu('#', '3', '')
+        +menu('#', '»', '')
+  //.panel-job
+  section.panel-connect
+    .container-inner
+      .connect-table
+        .connect-row
+          .connect-cell
+            h3 liên lạc với chúng tôi
+            p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
+          .connect-cell
+            a.btn.btn-info(href="#", title="liên hệ") liên hệ
+  //.panel-connect

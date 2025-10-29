@@ -1,0 +1,32 @@
+// =====================================================================================================================
+// ! Mixins
+// =====================================================================================================================
+
+// Utilities
+@import 'mixins/common';
+
+// Layout boostrap
+@import 'mixins/grid-framework';
+@import 'mixins/grid';
+
+// Components
+@import 'mixins/buttons';
+@import 'mixins/forms';
+
+// Button
+@mixin btn-view() {
+    display: inline-block;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: $color-white;
+    text-decoration: none;
+    background: $color-primary;
+    line-height: (15/10);
+    padding: 10px 31px;
+    transition: background .3s;
+    letter-spacing: 2px;
+
+    &:hover {
+        background: lighten($color-primary, 10%)
+    }
+}

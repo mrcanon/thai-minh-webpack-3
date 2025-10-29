@@ -1,0 +1,128 @@
+.panel-contact {
+    padding-top: 16px;
+    padding-bottom: 55px;
+
+    .heading-common {
+        margin-bottom: 15px;
+    }
+}
+
+.contact-chart {
+    position: relative;
+    
+    &::before {
+        content: '';
+        display: block;
+        padding-top: percentage(2/3);
+    }
+}
+
+.contact-cover {
+    @include coverer;
+}
+
+.contact-title {
+    color: $color-second;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.contact-group {
+    margin-bottom: 20px;
+    margin-top: 16px;
+}
+
+
+.contact-summary {
+    
+    p {
+        line-height: (36/24);
+        margin-bottom: 13px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        position: relative;
+        position: relative;
+        padding-left: 25px;
+
+        .fa { 
+            color: $color-second;
+            position: absolute;
+            left: 0;
+            top: 5px;
+        }
+    }
+}
+
+.contact-info,
+.contact-form {
+    margin-bottom: 30px;
+}
+
+.form-handle {
+    text-align: center;
+}
+
+.wpcf7-submit {
+    @extend .btn
+}
+
+.wpcf7-not-valid {
+    border-color: $btn-danger-border;
+}
+
+.wpcf7-not-valid-tip {
+    margin-top: 5px;
+}
+
+@include breakpoint(sm) {
+    
+    .panel-contact {
+        padding-top: 43px;
+        padding-bottom: 111px;
+    }
+
+    .contact-group {
+        @include clearfix;
+        margin-bottom: 12px;
+        margin-top: 42px;
+    }
+
+    .contact-info {
+        float: right;
+        width: percentage(800/1940);
+    }
+    
+    .contact-form {
+        float: left;
+        width: percentage(940/1940)
+    }
+
+    .contact-map {
+        padding-top: 40px;
+    }
+
+    .contact-title {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .form-handle {
+        text-align: left;
+    }
+
+    .contact-chart {
+        
+        &::before {
+            padding-top: percentage(910/1940);
+        }
+    }
+}

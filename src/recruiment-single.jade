@@ -1,0 +1,58 @@
+extends templates/layouts/one-colum.jade
+block head
+  +head('Recruiment Single', 'description', 'keywords', '', '', '', '')
+block content
+  section.panel-banner(data-parallax="true")
+    .container
+      .banner-inner
+          .banner-cover
+            .banner-table
+              h2.banner-heading Nhân sự
+  //.panel-banner
+  article.panel-recruiment
+    .container-inner
+      h2.heading-common working with us
+      h1.heading-recuiment 1. Assistant Manager
+      .single-group
+        .single-spec
+          .single-table
+            .single-row
+              .single-cell Seniority Level
+              .single-cell Associate
+            .single-row
+              .single-cell Industry
+              .single-cell Marketing and Advertising
+            .single-row
+              .single-cell Employment Type
+              .single-cell Full-time
+            .single-row
+              .single-cell Job Functions
+              .single-cell Creative Marketing
+        .single-info
+          .single-detail
+            h6 Job Description
+
+            p Et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. 
+
+            h6 Requirements
+
+            p - Obtaining Master or Bachelor Degrees of marketing, economic, business management or other equivalent fields.<br/>
+              | - At lease 5 years working in marketing field and 3 years managerial experience in marketing  operations; Candidates who have experience in chemical or sport business is an advantages.<br/>
+              | - Have good relationship with communication units, press and advertising companies, ...<br/>
+              | - Good communication, negotiation skills.
+
+            h6 Application dossier
+
+            P - Download application form <a href="#">here</a> <br/>
+              | - Application time: from 20/9/2013 to 10/10/2013
+  //.panel-recruiment
+  section.panel-connect
+    .container-inner
+      .connect-table
+        .connect-row
+          .connect-cell
+            h3 liên lạc với chúng tôi
+            p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
+          .connect-cell
+            a.btn.btn-info(href="#", title="liên hệ") liên hệ
+  //.panel-connect

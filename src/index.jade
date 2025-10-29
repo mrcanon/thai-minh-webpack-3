@@ -1,0 +1,123 @@
+extends templates/layouts/one-colum.jade
+block head
+  +head('Homepage', 'description', 'keywords', '', '', '', '')
+block content
+  section.panel-mainvisual(data-parallax="true")
+    img(src="assets/img/data/banner.jpg", width="1920", height="840", alt="")
+    .mainvisual-inner
+      .mainvisual-table
+        .mainvisual-cell
+          .container
+            h2.mainvisual-heading from foundations to future
+            p.mainvisual-content Lorem ipsum dolor sit amet, consectetur adipiscing 
+  //.panel-mainvisual
+  section.panel-about 
+    .container
+      .heading
+        h2.heading-name giới thiệu
+        p.heading-desc Lĩnh vực hoạt động
+      .row
+        .col-sm-4
+          +about('Construction', '#', 'assets/img/data/about-1.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nulla velit, rhoncus eu euismod faucibus, ultricies eget ligula. ')
+        .col-sm-4
+          +about('building renovation', '#', 'assets/img/data/about-2.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nulla velit, rhoncus eu euismod faucibus, ultricies eget ligula. ')
+         .col-sm-4
+          +about('project management', '#', 'assets/img/data/about-3.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nulla velit, rhoncus eu euismod faucibus, ultricies eget ligula. ')
+  //.panel-about 
+  section.panel-plan
+    .container
+      .plan-table
+        .plan-row
+          h2.plan-cell.plan-heading 
+            span From foundations to future
+          .plan-cell.plan-content
+            +plan('assets/img/data/stats-2.png', '<span>56</span>+', 'công trình')
+            +plan('assets/img/data/stats-1.png', '<span>120</span>+', 'nhân viên')
+            +plan('assets/img/data/stats-3.png', '<span>90</span>+', 'dự án')
+  //.panel-plan
+  section.panel-mission
+    .container 
+      .heading
+        h2.heading-name tầm nhìn - sứ mệnh
+        p.heading-desc tại sao chọn chúng tôi?
+      .mission-item
+        .mission-row
+          .mission-cell.mission-media
+            a(href="#")
+              img(src="assets/img/data/mission-1.jpg", width="454", height="340", alt="")
+          .mission-cell.mission-content
+            .mission-summary 
+              p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+
+              p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.
+
+              ul
+                li Nemo enim ipsam voluptatem quia 
+                li Voluptas sit aspernatur 
+                li Aut odit aut fugit, sed quia consequuntur
+            .mission-link
+              a(href="#") chi tiết
+  //.panel-mission
+  section.panel-project
+    .heading
+      h2.heading-name dự án
+      p.heading-desc các dự án đã thực hiện
+    .project-slider.owl-carousel(data-carousel='{"items": 4, "loop": true, "center": false, "margin": 0, "autoWidth": false, "rtl": false, "autoHeight": false, "autoplay": true, "autoplayTimeout": 5000, "nav": true, "dots": true, "responsive": {"0" : {"items": 1, "loop": true}, "479" : {"items": 2, "loop": true}, "768" : {"items": 3, "loop": true}, "992" : {"items": 4, "loop": true}}}')
+      +project('#', 'Eco building', 'assets/img/data/project-4.jpg')
+      +project('#', 'Eco building', 'assets/img/data/project-3.jpg')
+      +project('#', 'Eco building', 'assets/img/data/project-2.jpg')
+      +project('#', 'Eco building', 'assets/img/data/project-1.jpg')
+      +project('#', 'Eco building', 'assets/img/data/project-4.jpg')
+      +project('#', 'Eco building', 'assets/img/data/project-3.jpg')
+    .project-more
+      a(href="#", title="Xem thêm") Xem thêm
+  //.panel-project
+  section.panel-partner
+    .container
+      .partner-inner
+        .row
+          .col-sm-12.col-md-6
+            .partner-block
+              .heading
+                .heading-name đối tác
+                .heading-desc chia sẻ từ khách hàng
+              .partner-comment.partner-table
+                .partner-row
+                  .partner-cell
+                    img(src="assets/img/data/partner-1.jpg", width="160", height="160", alt="")
+                  .partner-cell
+                    .partner-content
+                      .partner-qoute 
+                        span Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                      .partner-author Mr. John Smith
+          .col-sm-12.col-md-6
+            .partner-slider.owl-carousel(data-carousel='{"items": 1, "loop": true, "center": false, "margin": 0, "autoWidth": false, "rtl": false, "autoHeight": false, "autoplay": true, "autoplayTimeout": 5000, "nav": false, "dots": true}')
+              .partner-group
+                +partner('#', 'Partner name', 'bg-6')
+                +partner('#', 'Partner name', 'bg-5')
+                +partner('#', 'Partner name', 'bg-4')
+                +partner('#', 'Partner name', 'bg-1')
+                +partner('#', 'Partner name', 'bg-2')
+                +partner('#', 'Partner name', 'bg-3')
+              .partner-group
+                +partner('#', 'Partner name', 'bg-6')
+                +partner('#', 'Partner name', 'bg-5')
+                +partner('#', 'Partner name', 'bg-4')
+                +partner('#', 'Partner name', 'bg-1')
+                +partner('#', 'Partner name', 'bg-2')
+                +partner('#', 'Partner name', 'bg-3')  
+              .partner-group
+                +partner('#', 'Partner name', 'bg-6')
+                +partner('#', 'Partner name', 'bg-5')
+                +partner('#', 'Partner name', 'bg-4')
+                +partner('#', 'Partner name', 'bg-1')
+                +partner('#', 'Partner name', 'bg-2')
+                +partner('#', 'Partner name', 'bg-3')
+              .partner-group
+                +partner('#', 'Partner name', 'bg-6')
+                +partner('#', 'Partner name', 'bg-5')
+                +partner('#', 'Partner name', 'bg-4')
+                +partner('#', 'Partner name', 'bg-1')
+                +partner('#', 'Partner name', 'bg-2')
+                +partner('#', 'Partner name', 'bg-3')    
+  //.panel-partner

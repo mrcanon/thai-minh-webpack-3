@@ -1,0 +1,165 @@
+%reset-and-clearfix {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include clearfix;
+}
+
+.nav-sidebar {
+    @extend %reset-and-clearfix;
+
+    > li {
+
+        &.current-menu-item {
+
+            > a {
+                background: lighten($color-second, 5%);                    
+
+                &::before {
+                    display: none;
+                }
+            }
+
+            + li {
+
+                > a {
+
+                    &::before {
+                        display: none;                            
+                    }
+                }
+            }
+        }
+        
+        &:not(:first-child) {
+            
+            a {
+                
+                &::before {
+                    content: "";
+                    height: 1px;
+                    position: absolute;
+                    right: 20px;
+                    left: 20px;
+                    top: 0;
+                    background: $color-nine;
+                }
+            }
+        }
+
+        > a {
+            display: block;
+            position: relative;
+            font-size: 14px;
+            line-height: 19px;
+            padding: 13px 20px;
+            text-decoration: none;
+            color: #f3f3f3;
+            transition: background 0.3s;
+        }
+    }
+}
+
+.nav-utility {
+    @extend %reset-and-clearfix;
+
+    li {
+        float: left;
+
+        &:not(:first-child) {
+            border-left: 1px solid $color-white;
+            margin-left: 25px;
+            padding-left: 25px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .fa {
+        margin-right: 7px;
+    }
+}
+
+.nav-social {
+    @extend %reset-and-clearfix;
+
+    > li {
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+.nav-main {
+    @extend %reset-and-clearfix;
+
+    a {
+        display: block;
+        text-decoration: none;
+    }
+
+    > li {
+        float: left;
+        position: relative;
+        
+        &:not(:first-child) {
+            margin-left: 46px;
+        }
+
+        > a {
+            text-transform: uppercase;
+
+            &:hover {
+                color: $color-second;
+            }
+        }
+
+        &.current-menu-item {
+            
+            > a {
+                color: $color-second;
+            }   
+        }
+
+        &:hover {
+            
+            ul {
+                display: block;
+            }
+        }
+    }
+
+    ul {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+    }
+}
+
+.nav-list {
+    @extend %reset-and-clearfix;
+
+    li {
+        position: relative;
+        padding: 3px 0 1px 18px;
+
+        &::before { 
+            content: '\f101';
+            display: inline-block;
+            @include fontawesome; 
+            color: $color-second;
+            position: absolute;
+            left: 3px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+}

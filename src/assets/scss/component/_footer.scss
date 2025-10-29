@@ -1,0 +1,136 @@
+.footer {
+    background: $color-four;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.footer-item {
+    margin-bottom: 20px;
+}
+
+.footer-social {
+    @include clearfix;
+
+    > li {
+        float: left;
+
+        &:not(:first-child) {
+            margin-left: 13px;
+        }
+    }
+}
+
+.footer-heading {
+    font-size: 14px;
+    color: $color-primary;
+    position: relative;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+    letter-spacing: 1px;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 25px;
+        height: 2px;
+        background: $color-primary;
+        position: absolute;
+        bottom: -4px;
+        left: 0px;
+    }
+}
+
+.footer-nav {
+    padding-top: 8px;
+}
+
+.footer-contact {
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-top: 0;
+        line-height: (40/24);
+        margin-bottom: 11px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        position: relative;
+        position: relative;
+        padding-left: 25px;
+
+       .fa { 
+            color: $color-second;
+            position: absolute;
+            left: 0;
+            top: 5px;
+        }
+    }
+}
+
+.footer-introduce {
+    @include clearfix;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.footer-logo,
+.footer-about {
+    float: left;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.footer-logo {
+    width: 100px;
+    margin-top: 17px;
+}
+
+.footer-about {
+    width: calc(100% - 100px);
+    margin-top: 8px;
+}
+
+@include breakpoint(sm) {
+    .footer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+
+    .footer-logo {
+        width: 144px;
+        margin-top: 17px;
+    }
+
+    .footer-about {
+        width: calc(100% - 144px);
+        margin-top: 8px;
+    }
+
+}
+
+@include breakpoint(lg) {
+    .footer-contact {
+        max-width: 290px;
+    }
+
+    .footer-about {
+
+        p {
+            max-width: 245px;
+            margin-bottom: 10px;
+        }
+    }
+}

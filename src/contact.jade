@@ -1,0 +1,77 @@
+extends templates/layouts/one-colum.jade
+block head
+  +head('Contact', 'description', 'keywords', '', '', '', '')
+block content
+  section.panel-banner(data-parallax="true")
+    .container
+      .banner-inner
+          .banner-cover
+            .banner-table
+              h2.banner-heading Liên hệ
+  //.panel-banner
+  section.panel-contact
+    .container-inner
+      h2.heading-common liên lạc với chúng tôi
+      .contact-group
+        .contact-info
+          h3.contact-title thông tin liên hệ
+          .contact-summary
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque egestas maximus elementum. Duis tincidunt lorem a tortor eleifend lacinia. Donec sit amet tempor orci.   
+            ul
+              li
+                  i.fa.fa-map-marker
+                  | Tầng 2, Toà nhà CDS, Số 33, Ngõ 61 Lạc Trung, Hai Bà Trưng, Hà Nội
+              li
+                  i.fa.fa-phone
+                  | (+84) 4 3852 2248
+              li
+                  i.fa.fa-envelope
+                  | info@thaiminhgroup.vn
+        .contact-form
+          h3.contact-title gửi email phản hồi
+          form
+            .row
+              .col-sm-5 
+                .form-group
+                  label.form-label Họ tên
+                  input.form-control(type="text", name="your_name")
+              .col-sm-7 
+                .form-group  
+                  label.form-label Email
+                  input.form-control(type="email", name="your_email")
+            .row
+              .col-sm-12
+                .form-group
+                  label.form-label Nội dung
+                  textarea.form-control
+            .form-handle
+              button.btn Gửi
+      .contact-map
+        h2.heading-common bản đồ
+        .contact-chart
+          .contact-cover#map(data-title="Thái Minh", data-latitude="21.001289", data-longitude="105.866779")
+  section.panel-contact  
+block tracking
+  script(src="https://maps.googleapis.com/maps/api/js")
+  script.
+    google.maps.event.addDomListener(window, 'load', initMap);
+    function initMap() {
+        var mapElement = document.getElementById('map'),
+        latitude = mapElement.getAttribute('data-latitude'),
+        longitude = mapElement.getAttribute('data-longitude'),
+        title = mapElement.getAttribute('data-title');
+
+        var mapOptions = {
+            zoom: 14,
+            center: new google.maps.LatLng(latitude, longitude), 
+            styles: [{"featureType":"all","elementType":"geometry","stylers":[{"color":"#2c9ec9"}]},{"featureType":"all","elementType":"geometry.fill","stylers":[{"color":"#1c2b4e"}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"gamma":0.01},{"lightness":20},{"color":"#6892a0"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"saturation":-31},{"lightness":-33},{"weight":2},{"gamma":0.8},{"color":"#162344"}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"lightness":30},{"saturation":30},{"color":"#1c2b4e"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"saturation":20}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"lightness":20},{"saturation":-20}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":10},{"saturation":-30}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#2f497f"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"saturation":25},{"lightness":25},{"color":"#2f497f"}]},{"featureType":"road.highway.controlled_access","elementType":"geometry.fill","stylers":[{"color":"#2e487e"}]},{"featureType":"road.highway.controlled_access","elementType":"labels.text.fill","stylers":[{"color":"#a4b1c8"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#2e487e"}]},{"featureType":"road.arterial","elementType":"labels.text.fill","stylers":[{"color":"#aabbcf"}]},{"featureType":"road.arterial","elementType":"labels.text.stroke","stylers":[{"color":"#1a284a"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"#2f497f"}]},{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#6b99a3"}]},{"featureType":"road.local","elementType":"labels.text.stroke","stylers":[{"color":"#131e44"}]},{"featureType":"water","elementType":"all","stylers":[{"lightness":-20}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#6890ea"}]}]
+        };
+        var map = new google.maps.Map(mapElement, mapOptions);
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(latitude, longitude), 
+            map: map,
+            title: title
+        });
+    }
+
+          

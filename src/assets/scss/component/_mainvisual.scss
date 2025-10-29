@@ -1,0 +1,71 @@
+.panel-mainvisual {
+    position: relative;
+}
+
+.mainvisual-inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.mainvisual-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.mainvisual-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.mainvisual-heading {
+    font-family: $font-open-sans;
+    line-height: (65/48);
+    margin-top: 0;
+    margin-bottom: 6px;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+}
+
+.mainvisual-content {
+    font-family: $font-open-sans;
+    margin-bottom: 0;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+
+.mainvisual-heading,
+.mainvisual-content {
+    color: $color-white;
+    text-transform: uppercase;
+    max-width: 650px;
+}
+
+@include breakpoint(sm) {
+    .mainvisual-heading {
+        margin-bottom: 12px;
+    }
+}
+
+@include breakpoint(lg) {
+    .panel-mainvisual {
+        margin-bottom: 5px;
+    }
+
+    .mainvisual-heading {
+        letter-spacing: 5px;
+        font-size: 48px;
+    }        
+
+    .mainvisual-content {
+        letter-spacing: 1.2px;
+    }
+
+    .mainvisual-cell {
+        padding-bottom: 118px;
+    }
+}

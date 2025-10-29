@@ -1,0 +1,29 @@
+.page-numbers {
+    margin: 0 0 37px;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 0;
+
+    li {
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 12px;
+    }
+
+    a, 
+    span {
+        display: inline-block;
+        color: $color-eleven;
+        text-decoration: none;
+
+        &:hover {
+            color: $color-third;
+        }
+    }
+
+    .current {
+        color: $color-third;
+    }
+}

@@ -1,0 +1,137 @@
+.panel-aside {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    width: 280px;
+    height: 100%;
+    background: $color-primary;
+    z-index: 99;
+    transition: transform .5s;
+
+    .nav-sidebar {
+        margin-bottom: 10px;
+    }
+
+    .is-aside & {
+        visibility: visible;
+        transform: translate3d(-280px, 0, 0);
+    }
+}
+
+.aside-inner {
+    height: 100%;
+    padding-bottom: 30px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.aside-heading {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 9px 20px;
+    line-height: 32px;
+    position: relative;
+
+    span {
+        color: $color-second;
+    }
+
+    a {
+        color: $color-white;
+        text-decoration: none;
+    }
+}
+
+.aside-btn {
+    display: block;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 10px;
+    top: 9px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.aside-item {
+    padding: 7px 20px;
+
+    &:last-of-type() {
+        margin-bottom: 20px;
+    }
+    
+    a {
+        display: block;
+        position: relative;
+        padding: 8px 10px 8px 55px;
+        border-radius: 3px;
+        color: $color-white;
+        text-decoration: none;
+        line-height: 1;
+    }
+}
+
+.aside-icon {
+    font-size: 30px;
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.aside-phone {
+    
+    a {
+        background: $color-second;
+    }
+}
+
+.aside-mail {
+    
+    a {
+        background: $color-ten;
+    }
+}
+
+.aside-label {
+    font-size: 10px;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+}
+
+.aside-value {
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.aside-social {
+    text-align: center;
+
+    > li {
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        > a {
+            font-size: 24px;
+            color: $color-white;
+        }
+    }
+}
+
+.aside-cover {
+    z-index: 90;
+    background: rgba($color-black, .5);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s;
+
+    .is-aside & {
+        visibility: visible;
+        opacity: 1;
+        @include coverer; 
+    }
+}

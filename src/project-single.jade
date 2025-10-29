@@ -1,0 +1,69 @@
+extends templates/layouts/one-colum.jade
+block head
+  +head('Project Single', 'description', 'keywords', '', '', '', '')
+block content
+  article.panel-single
+    .container-inner
+      h2.single-category Dự án
+      h1.single-heading dự án chung cư cao cấp
+      #owl-large.owl-carousel.single-large
+        +owl-sycn('dự án chung cư cao cấp', 'assets/img/data/project-large-1.jpg', '970', '439')
+        +owl-sycn('dự án chung cư cao cấp', 'assets/img/data/project-large-2.jpg', '970', '439')
+        +owl-sycn('dự án chung cư cao cấp', 'assets/img/data/project-large-3.jpg', '970', '439')
+        +owl-sycn('dự án chung cư cao cấp', 'assets/img/data/project-large-4.jpg', '970', '439')
+      #owl-thumbnail.owl-carousel.single-thumbnail
+        +owl-sycn('dự án chung cư cao cấp', 'assets/img/data/project-thumbnail-1.jpg', '360', '220')
+        +owl-sycn('dự án chung cư cao cấp', 'assets/img/data/project-thumbnail-2.jpg', '360', '220')
+        +owl-sycn('dự án chung cư cao cấp', 'assets/img/data/project-thumbnail-3.jpg', '360', '220')
+        +owl-sycn('dự án chung cư cao cấp', 'assets/img/data/project-thumbnail-4.jpg', '360', '220')
+      .single-group
+        .single-spec
+          .single-table
+            .single-row
+              .single-cell Sector
+              .single-cell Urban Infrastructure
+            .single-row
+              .single-cell Sub-sector
+              .single-cell Car parking
+            .single-row
+              .single-cell Deployment period
+              .single-cell 2016-2017
+            .single-row
+              .single-cell Status
+              .single-cell Project proposal
+        .single-info
+          .single-detail
+            h6 At vero eos et accusamus 
+            p Et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+            h6 Temporibus autem quibusdam 
+            p Aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat
+          .single-share
+            .single-label Share
+            ul.nav-social.single-social
+              li
+                a(href="#")
+                  i.fa.fa-facebook
+              li
+                a(href="#")
+                  i.fa.fa-google-plus
+              li
+                a(href="#")
+                  i.fa.fa-linkedin
+      .single-relative
+        h3.heading-common các dự án khác
+        .row
+          .col-sm-6
+            +project-relative('#', 'building renovation', 'assets/img/data/work-2.jpg')
+          .col-sm-6
+            +project-relative('#', 'project management', 'assets/img/data/work-1.jpg')
+  //.panel-single  
+
+            
+          
+        
+
+
+
+
+
+

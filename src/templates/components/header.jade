@@ -1,0 +1,38 @@
+header.header
+  .header-top
+    .container
+      ul.nav-utility.header-utility
+        li
+          a(href="tel:08438522248")
+            i.fa.fa-phone
+            | (+84) 4 3852 2248
+        li 
+          a(href="mailto:")
+            i.fa.fa-envelope
+            | info@thaiminhgroup.vn
+      ul.nav-social.header-social
+        li
+          a(href="#")
+            i.fa.fa-facebook
+        li
+          a(href="#")
+            i.fa.fa-google-plus
+        li
+          a(href="#")
+            i.fa.fa-linkedin
+  
+  .header-bot
+    .container
+      .header-logo
+        a(href="#")
+          img(src="assets/img/logo.png", width="180", height="98", alt="Thai Minh Logo")
+      a.header-control#header-control(href="#panel-aside", data-control="aside") Menu
+      ul.nav-main.header-nav
+        +menu('#', 'Trang chủ', 'current-menu-item')
+        +menu('#', 'Về thái minh', '')
+        +menu('#', 'Dự án', '')
+        +menu('#', 'Đối tác', '')
+        +menu('#', 'Nhân sự', '')
+        +menu('#', 'Liên hệ', '')
+        
+//.header

@@ -1,0 +1,74 @@
+extends templates/layouts/one-colum.jade
+block head
+  +head('Đối tác', 'description', 'keywords', '', '', '', '')
+block content
+  section.panel-banner(data-parallax="true")
+      .container
+        .banner-inner
+          .banner-cover
+            .banner-table
+              h2.banner-heading Đối tác
+  //.panel-banner
+  section.panel-customer
+    .container-inner
+      h2.heading-common partner
+      .mission-item
+        .mission-row
+          .mission-cell.mission-media
+            a(href="#")
+              img(src="assets/img/data/mission-2.jpg", width="451", height="300", alt="")
+          .mission-cell.mission-content
+            h3 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+            p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.
+       .customer-slider.owl-carousel(data-carousel='{"items": 6, "loop": true, "center": false, "margin": 0, "autoWidth": false, "rtl": false, "autoHeight": false, "autoplay": true, "autoplayTimeout": 5000, "nav": false, "dots": false, "responsive": {"0" : {"items": 2, "loop": true, "dots": true}, "479" : {"items": 3, "loop": true, "dots": true}, "768" : {"items": 4, "loop": true, "dots": true}, "992" : {"items": 5, "loop": true, "dots": true}, "1200" : {"items": 6, "loop": true, "dots": false, "nav": true}}}')
+          +partner('#', 'Partner name', 'bg-6')
+          +partner('#', 'Partner name', 'bg-5')
+          +partner('#', 'Partner name', 'bg-4')
+          +partner('#', 'Partner name', 'bg-1')
+          +partner('#', 'Partner name', 'bg-2')
+          +partner('#', 'Partner name', 'bg-3')
+          +partner('#', 'Partner name', 'bg-2')
+          +partner('#', 'Partner name', 'bg-1')
+  //.panel-customer
+  section.panel-testimonial
+    .container-inner
+      .heading
+        h2.heading-name khách hàng
+        p.heading-desc chia sẻ từ khách hàng
+      .testimonial-body
+        .row
+          .col-sm-6
+            .partner-block
+              .partner-comment.partner-table(data-mh="tesimonial")
+                .partner-row
+                  .partner-cell
+                    img(src="assets/img/data/partner-1.jpg", width="160", height="160", alt="")
+                  .partner-cell
+                    .partner-content
+                      .partner-qoute 
+                        span Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                      .partner-author Mr. John Smith
+          .col-sm-6
+            .partner-block  
+              .partner-comment.partner-table(data-mh="tesimonial")
+                .partner-row
+                  .partner-cell
+                    img(src="assets/img/data/partner-1.jpg", width="160", height="160", alt="")
+                  .partner-cell
+                    .partner-content
+                      .partner-qoute 
+                        span Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                      .partner-author Mr. John Smith
+  //.panel-testimonial
+  section.panel-connect
+    .container-inner
+      .connect-table
+        .connect-row
+          .connect-cell
+            h3 liên lạc với chúng tôi
+            p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
+          .connect-cell
+            a.btn.btn-info(href="#", title="liên hệ") liên hệ
+  //.panel-connect
+
