@@ -37,3 +37,5 @@ Or
 npm run build
 npm run preview
 ```
+
+### [Open website](https://mrcanon.github.io/thai-minh-webpack-3/) on github
